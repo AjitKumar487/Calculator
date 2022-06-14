@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(49, 48, 48);
+}
+.calculator{
+    display: grid;
+    grid-template-areas: 
+    'calculatorscreen calculatorscreen calculatorscreen calculatorscreen'
+    'clearscreen clearscreen clearscreen clearscreen'
+    'keys keys keys keys'
+    'keys keys keys keys'
+    'keys keys keys keys';
+    grid-gap: 15px;
+    width: 50vw;
+    height: 50vh;
+    margin: 50px auto;
+    border: 8px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: grey;
+}
+.calculator button{
+    border-radius: 5px;
+    transition: all 0.3s;
+    box-shadow: 2px 2px #4b4545;
+}
+.calculator button:hover{
+    transform: scale(0.97);
+    border: 1px solid wheat;
+}
+.calculator-screen{
+    display: grid;
+    grid-area: calculatorscreen;
+}
+.calculator-screen #result{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    text-align: end;
+    box-shadow: 3px 3px rgb(126 113 113);
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.clear-screen{
+    display: grid;
+    grid-area: clearscreen;
+    display: flex;
+}
+.keys{
+    display: grid;
+    grid-area: keys;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.keys .numeric{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.keys .operator{
+    color: white;
+    background-color: rgb(156, 3, 3);
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.keys .equal-key{
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.clear-screen button{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 50%;
+    margin: 0px 5px;
+}
